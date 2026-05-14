@@ -82,9 +82,12 @@ nav {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0 32px;
     opacity: 0; /* Let GSAP handle the reveal */
+}
+
+.logo {
+    margin-right: 48px;
 }
 
 .glass {
@@ -98,6 +101,7 @@ nav {
     display: flex;
     gap: 32px;
     list-style: none;
+    margin-right: auto;
 }
 
 .nav-links a {
