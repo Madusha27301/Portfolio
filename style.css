@@ -685,6 +685,15 @@ textarea.form-input {
     line-height: 1.6;
 }
 
+.experience-img {
+    transition: var(--transition);
+}
+
+.experience-img:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-blue) !important;
+}
+
 @media (max-width: 900px) {
     .experience-card {
         grid-template-columns: 1fr;
