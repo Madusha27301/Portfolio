@@ -624,6 +624,74 @@ textarea.form-input {
     }
 }
 
+/* Experience & Leadership Section */
+.experience-section {
+    padding: 100px 20px;
+}
+
+.experience-card {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.experience-info h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.role-card {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.role-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.role-tag {
+    padding: 4px 12px;
+    background: var(--accent-blue);
+    color: white;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.org-name {
+    color: var(--accent-cyan);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.role-desc {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .experience-card {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
 /* Publications Section */
 .publications-section {
     padding: 100px 20px;
