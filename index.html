@@ -421,12 +421,28 @@
 
                 <!-- Project 1 -->
                 <div class="project-card-v2" data-category="ml">
-                    <div class="card-img-wrapper" style="background: linear-gradient(45deg, #1e293b, #0f172a);">
+                    <div class="card-img-wrapper" style="height: 250px; background: linear-gradient(45deg, #1e293b, #0f172a); display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="trending-up" style="width: 80px; height: 80px; color: rgba(255,255,255,0.8);"></i>
                         <span class="category-tag">Machine Learning</span>
                     </div>
                     <div class="card-content">
                         <h3>Stock Price Forecasting</h3>
-                        <p>Developed LSTM-based deep learning models to forecast stock prices of Intel, eBay, and Spotify.</p>
+                        
+                        <div class="insight-panel" style="margin: 15px 0; padding: 15px; background: rgba(255,255,255,0.03); border-radius: 12px; border-left: 3px solid var(--accent-blue);">
+                            <div class="insight-item" style="margin-bottom: 10px; font-size: 0.9rem; display: flex; gap: 10px; align-items: flex-start;">
+                                <i data-lucide="brain-circuit" style="width: 18px; color: var(--accent-blue); flex-shrink: 0; margin-top: 2px;"></i>
+                                <span><strong>Model:</strong> Developed advanced <strong>LSTM-based deep learning</strong> architectures.</span>
+                            </div>
+                            <div class="insight-item" style="margin-bottom: 10px; font-size: 0.9rem; display: flex; gap: 10px; align-items: flex-start;">
+                                <i data-lucide="database" style="width: 18px; color: #f59e0b; flex-shrink: 0; margin-top: 2px;"></i>
+                                <span><strong>Coverage:</strong> Multi-stock forecasting for <strong>Intel, eBay, and Spotify</strong> assets.</span>
+                            </div>
+                            <div class="insight-item" style="font-size: 0.9rem; display: flex; gap: 10px; align-items: flex-start;">
+                                <i data-lucide="line-chart" style="width: 18px; color: #10b981; flex-shrink: 0; margin-top: 2px;"></i>
+                                <span><strong>Outcome:</strong> Achieved precise trend identification for market volatility analysis.</span>
+                            </div>
+                        </div>
+
                         <div class="project-tags" style="margin-bottom: 24px;">
                             <span class="tag">Python</span>
                             <span class="tag">LSTM</span>
@@ -439,6 +455,42 @@
                     </div>
                 </div>
 
+                <!-- Project: Bank Churn Analytics -->
+                <div class="project-card-v2" data-category="analytics">
+                    <div class="card-img-wrapper" style="height: 250px; background: linear-gradient(135deg, #1e3a8a, #3b82f6); display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="line-chart" style="width: 80px; height: 80px; color: rgba(255,255,255,0.8);"></i>
+                        <span class="category-tag">Data Mining</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Bank Customer Churn Analytics</h3>
+                        
+                        <div class="insight-panel" style="margin: 15px 0; padding: 15px; background: rgba(255,255,255,0.03); border-radius: 12px; border-left: 3px solid var(--accent-blue);">
+                            <div class="insight-item" style="margin-bottom: 10px; font-size: 0.9rem; display: flex; gap: 10px; align-items: flex-start;">
+                                <i data-lucide="target" style="width: 18px; color: var(--accent-blue); flex-shrink: 0; margin-top: 2px;"></i>
+                                <span><strong>Performance:</strong> Optimized Random Forest model achieving <strong>87.4% prediction accuracy</strong>.</span>
+                            </div>
+                            <div class="insight-item" style="margin-bottom: 10px; font-size: 0.9rem; display: flex; gap: 10px; align-items: flex-start;">
+                                <i data-lucide="users" style="width: 18px; color: #f59e0b; flex-shrink: 0; margin-top: 2px;"></i>
+                                <span><strong>Core Insight:</strong> Older customers with lower balances identified as highest attrition risk.</span>
+                            </div>
+                            <div class="insight-item" style="font-size: 0.9rem; display: flex; gap: 10px; align-items: flex-start;">
+                                <i data-lucide="lightbulb" style="width: 18px; color: #10b981; flex-shrink: 0; margin-top: 2px;"></i>
+                                <span><strong>Strategy:</strong> Proposed targeted retention and personalized engagement to improve loyalty.</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tags" style="margin-bottom: 24px;">
+                            <span class="tag">Random Forest</span>
+                            <span class="tag">87.4% Accuracy</span>
+                            <span class="tag">Predictive Analytics</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="Projects/Assignment 01/Assignment_01_Report.pdf" target="_blank" class="btn-details">Read Full Report</a>
+                            <a href="Projects/Assignment 01/Assignment_01.ipynb" target="_blank" class="btn-repo"><i data-lucide="file-code" style="width: 16px;"></i> View Code</a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-card-v2" data-category="analytics">
                     <div class="card-img-wrapper" style="height: 250px;">
                         <img src="Projects/Text Analytics/1.png" alt="McDonald's Sentiment Analytics" style="width: 100%; height: 100%; object-fit: cover;">
@@ -446,12 +498,26 @@
                     </div>
                     <div class="card-content">
                         <h3>McDonald's Sentiment Analytics</h3>
-                        <p>Applied advanced NLP techniques to analyze 33,000+ customer reviews, utilizing sentiment scoring and topic modeling to uncover hidden service quality patterns.</p>
+                        
+                        <div class="insight-panel" style="margin: 15px 0; padding: 15px; background: rgba(255,255,255,0.03); border-radius: 12px; border-left: 3px solid var(--accent-blue);">
+                            <div class="insight-item" style="margin-bottom: 10px; font-size: 0.9rem; display: flex; gap: 10px; align-items: flex-start;">
+                                <i data-lucide="message-square" style="width: 18px; color: var(--accent-blue); flex-shrink: 0; margin-top: 2px;"></i>
+                                <span><strong>Scale:</strong> Analyzed a massive dataset of <strong>33,000+ customer reviews</strong>.</span>
+                            </div>
+                            <div class="insight-item" style="margin-bottom: 10px; font-size: 0.9rem; display: flex; gap: 10px; align-items: flex-start;">
+                                <i data-lucide="search" style="width: 18px; color: #f59e0b; flex-shrink: 0; margin-top: 2px;"></i>
+                                <span><strong>Technique:</strong> Sentiment scoring & Topic modeling using <strong>NLTK & TextBlob</strong>.</span>
+                            </div>
+                            <div class="insight-item" style="font-size: 0.9rem; display: flex; gap: 10px; align-items: flex-start;">
+                                <i data-lucide="zap" style="width: 18px; color: #10b981; flex-shrink: 0; margin-top: 2px;"></i>
+                                <span><strong>Impact:</strong> Identified critical service pain points for data-driven operational tuning.</span>
+                            </div>
+                        </div>
+
                         <div class="project-tags" style="margin-bottom: 24px;">
-                            <span class="tag">NLTK</span>
-                            <span class="tag">Spacy</span>
-                            <span class="tag">TextBlob</span>
-                            <span class="tag">Logistic Regression</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Sentiment Analysis</span>
                         </div>
                         <div class="card-footer">
                             <a href="#" class="btn-details">Explore Case Study</a>

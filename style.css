@@ -176,8 +176,8 @@ main {
 }
 
 .item-hero h1 {
-    font-size: 4rem;
-    line-height: 1;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    line-height: 1.1;
     margin-bottom: 10px;
     background: var(--hero-gradient);
     -webkit-background-clip: text;
@@ -306,8 +306,14 @@ main {
 
 .projects-grid-v2 {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
+}
+
+@media (max-width: 400px) {
+    .projects-grid-v2 {
+        grid-template-columns: 1fr;
+    }
 }
 
 .project-card-v2 {
@@ -556,71 +562,89 @@ textarea.form-input {
     }
 
     .nav-links {
-        gap: 15px;
+        display: none;
     }
 
-    .nav-links a {
-        font-size: 0.8rem;
+    .logo {
+        margin-right: 0;
     }
 
     .nav-cta {
-        gap: 8px;
-    }
-
-    .nav-cta .cta-button {
-        padding: 6px 14px;
-        font-size: 0.8rem;
-    }
-
-    #hero-title {
-        font-size: 3rem !important;
-    }
-
-    #hero-subtitle {
-        font-size: 1rem !important;
+        margin-left: auto;
     }
 
     .profile-container {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
     }
 
-    .about-text h2 {
-        font-size: 2.2rem;
-    }
-
-    .about-cards-grid {
+    .bento-grid {
         grid-template-columns: 1fr;
+    }
+
+    .item-hero, .item-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .item-hero h1 {
+        font-size: 2.5rem !important;
+    }
+
+    section {
+        padding: 60px 20px !important;
+    }
+
+    h2 {
+        font-size: 2.2rem !important;
     }
 
     .projects-grid-v2 {
         grid-template-columns: 1fr;
     }
 
-    .contact-form {
+    .experience-walkthrough {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .experience-visual-side {
+        display: none;
+    }
+
+    .timeline-feed {
+        padding-left: 20px;
+    }
+
+    .timeline-content {
         padding: 20px;
-    }
-
-    .contact-form div {
-        grid-template-columns: 1fr !important;
-    }
-
-    section {
-        padding: 60px 15px !important;
     }
 }
 
 @media (max-width: 480px) {
-    #hero-title {
-        font-size: 2.4rem !important;
+    .item-hero h1 {
+        font-size: 2rem !important;
     }
 
-    .nav-links {
-        display: none; /* Hide links on very small screens to avoid overlap */
+    h2 {
+        font-size: 1.8rem !important;
     }
 
-    .about-text h2 {
-        font-size: 1.8rem;
+    .insight-panel {
+        padding: 12px;
+    }
+
+    .insight-item {
+        font-size: 0.85rem !important;
+        gap: 8px;
+    }
+
+    .card-footer {
+        flex-direction: column;
+    }
+
+    .btn-details, .btn-repo {
+        width: 100%;
     }
 }
 
