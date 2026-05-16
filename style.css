@@ -707,6 +707,7 @@ textarea.form-input {
     border-radius: 24px;
     object-fit: cover;
     border: 1px solid var(--border);
+    transition: opacity 0.5s ease, transform var(--transition);
 }
 
 @media (max-width: 900px) {
@@ -726,10 +727,9 @@ textarea.form-input {
 
 .visits-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    max-width: 1400px;
-    margin: 0 auto;
+    margin-top: 40px;
 }
 
 .visit-card {
@@ -788,7 +788,61 @@ textarea.form-input {
 .modal-prev { left: 30px; }
 .modal-next { right: 30px; }
 
-@media (max-width: 1100px) {
+/* Achievements Section */
+.achievements-section {
+    padding: 100px 20px;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.achievement-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Sliding Gallery */
+.slider-container {
+    width: 100%;
+    height: 500px;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border);
+}
+
+.slider-track {
+    display: flex;
+    width: 400%; /* 4 images * 100% */
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slider-track img {
+    width: 25%; /* 1/4 of track */
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .mini-scroll-container {
+        height: 350px;
+    }
+}
     .visits-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -957,80 +1011,157 @@ textarea.form-input {
     }
 }
 
-/* Experience & Leadership Section */
+/* Experience Walkthrough Timeline */
 .experience-section {
     padding: 100px 20px;
 }
 
-.experience-card {
+.experience-walkthrough {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 60px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 50px;
-    align-items: center;
 }
 
-.experience-info h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+.sticky-visual {
+    position: sticky;
+    top: 100px;
 }
 
-.role-card {
+.journey-img {
+    width: 100%;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.journey-img:hover {
+    transform: scale(1.02);
+}
+
+.impact-badge {
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+}
+
+.timeline-feed {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-feed::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent-blue), transparent);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -35px;
+    top: 25px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent-blue);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--accent-blue);
+}
+
+.timeline-content {
     padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    border-radius: 24px;
+    transition: all 0.3s ease;
 }
 
-.role-header {
+.timeline-content:hover {
+    transform: translateX(10px);
+}
+
+.timeline-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
-.role-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-primary);
-}
-
-.role-tag {
-    padding: 4px 12px;
-    background: var(--accent-blue);
-    color: white;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.org-name {
-    color: var(--accent-cyan);
+.timeline-org {
+    color: var(--accent-blue);
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.role-desc {
+.timeline-date {
+    background: rgba(var(--accent-blue-rgb), 0.1);
+    color: var(--accent-blue);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.timeline-bullets {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.timeline-bullets li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
     color: var(--text-secondary);
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.6;
 }
 
-.experience-img {
-    transition: var(--transition);
+.timeline-bullets li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
 }
 
-.experience-img:hover {
-    transform: scale(1.02);
-    border-color: var(--accent-blue) !important;
+.timeline-footer {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.doc-link {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.doc-link:hover {
+    color: var(--accent-blue);
 }
 
 @media (max-width: 900px) {
-    .experience-card {
+    .experience-walkthrough {
         grid-template-columns: 1fr;
-        gap: 30px;
+    }
+    .experience-visual-side {
+        display: none;
     }
 }
 

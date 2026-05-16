@@ -146,10 +146,24 @@ function changeImage(step) {
     document.getElementById('lightbox-img').src = currentImages[currentIndex];
 }
 
-// Close on outside click
-window.addEventListener('click', (event) => {
-    const lightbox = document.getElementById('lightbox');
-    if (event.target == lightbox) {
-        closeLightbox();
-    }
+// CBA Forum Sliding Carousels
+function initSlider(sliderId) {
+    const track = document.getElementById(sliderId);
+    if (!track) return;
+
+    let currentIndex = 0;
+    const images = track.querySelectorAll('img');
+    const totalImages = images.length;
+
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalImages;
+        const offset = -(currentIndex * (100 / totalImages));
+        track.style.transform = `translateX(${offset}%)`;
+    }, 2500);
+}
+
+// Initialize sliders
+document.addEventListener('DOMContentLoaded', () => {
+    initSlider('cba-2024-slider');
+    initSlider('cba-2025-slider');
 });
