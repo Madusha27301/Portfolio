@@ -225,14 +225,14 @@
 
         <!-- CBA Forum 2024 Section -->
         <section id="forum" class="forum-section">
-            <div class="container" style="text-align: center;">
-                <span class="tag" style="margin-bottom: 20px;">KEY EVENT</span>
-                <h2 style="font-size: 3rem; margin-bottom: 20px;">Colombo Business <br><span style="color: var(--accent-blue);">Analytics Forum 2024</span></h2>
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <p style="color: var(--text-secondary); line-height: 1.8;">
+            <div class="forum-container">
+                <div class="forum-info">
+                    <span class="tag" style="margin-bottom: 20px;">KEY EVENT</span>
+                    <h2 style="font-size: 3rem; margin-bottom: 20px;">Colombo Business <br><span style="color: var(--accent-blue);">Analytics Forum 2024</span></h2>
+                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 30px;">
                         Served as a key member of the <strong>Logistics Committee</strong> for this flagship event. The forum successfully connected 100+ industry leaders with technology providers, fostering an ecosystem for digital transformation and strategic networking.
                     </p>
-                    <div class="partner-list">
+                    <div class="partner-list" style="justify-content: flex-start; margin-top: 0;">
                         <span class="partner-tag">MAS Holdings</span>
                         <span class="partner-tag">KPMG</span>
                         <span class="partner-tag">PickMe</span>
@@ -240,27 +240,8 @@
                         <span class="partner-tag">WIA Systems</span>
                     </div>
                 </div>
-            </div>
-
-            <!-- Infinite Scroll Gallery -->
-            <div class="scroll-container">
-                <div class="scroll-track">
-                    <!-- Set 1 -->
-                    <div class="scroll-item glass"><img src="Experiances/CBA Forum 2024/1726796284160.jpeg" alt="CBA Forum"></div>
-                    <div class="scroll-item glass"><img src="Experiances/CBA Forum 2024/1726796334053.jpeg" alt="CBA Forum"></div>
-                    <div class="scroll-item glass"><img src="Experiances/CBA Forum 2024/1726796361539.jpeg" alt="CBA Forum"></div>
-                    <div class="scroll-item glass"><img src="Experiances/CBA Forum 2024/1726796380917.jpeg" alt="CBA Forum"></div>
-                    <div class="scroll-item glass"><img src="Experiances/CBA Forum 2024/1726796406385.jpeg" alt="CBA Forum"></div>
-                    <div class="scroll-item glass"><img src="Experiances/CBA Forum 2024/1726796436734.jpeg" alt="CBA Forum"></div>
-                    <div class="scroll-item glass"><img src="Experiances/CBA Forum 2024/1726796466382.jpeg" alt="CBA Forum"></div>
-                    <!-- Duplicate for loop -->
-                    <div class="scroll-item glass"><img src="Experiances/CBA Forum 2024/1726796284160.jpeg" alt="CBA Forum"></div>
-                    <div class="scroll-item glass"><img src="Experiances/CBA Forum 2024/1726796334053.jpeg" alt="CBA Forum"></div>
-                    <div class="scroll-item glass"><img src="Experiances/CBA Forum 2024/1726796361539.jpeg" alt="CBA Forum"></div>
-                    <div class="scroll-item glass"><img src="Experiances/CBA Forum 2024/1726796380917.jpeg" alt="CBA Forum"></div>
-                    <div class="scroll-item glass"><img src="Experiances/CBA Forum 2024/1726796406385.jpeg" alt="CBA Forum"></div>
-                    <div class="scroll-item glass"><img src="Experiances/CBA Forum 2024/1726796436734.jpeg" alt="CBA Forum"></div>
-                    <div class="scroll-item glass"><img src="Experiances/CBA Forum 2024/1726796466382.jpeg" alt="CBA Forum"></div>
+                <div class="forum-visual">
+                    <img src="Experiances/CBA Forum 2024/1726796466382.jpeg" alt="CBA Forum 2024" class="forum-image glow-card">
                 </div>
             </div>
         </section>
@@ -411,42 +392,46 @@
 
             <div class="visits-grid">
                 <!-- CodeGen -->
-                <div class="visit-card glass glow-card">
+                <div class="visit-card glass glow-card" onclick="openLightbox(['Industry Visits/Code Gen/1740545034157.jpeg', 'Industry Visits/Code Gen/1740545040078.jpeg', 'Industry Visits/Code Gen/1740545044779.jpeg'])">
                     <span class="visit-badge">AI & INNOVATION</span>
                     <img src="Industry Visits/Code Gen/1740545044779.jpeg" alt="CodeGen Visit" class="visit-img">
                     <div class="visit-overlay">
                         <h3>CodeGen International</h3>
-                        <p>Gained insights into AI-driven solutions and cutting-edge IT innovations, reinforcing the power of data-driven decision making.</p>
+                        <p>Gained insights into AI-driven solutions and cutting-edge IT innovations.</p>
+                        <span style="font-size: 0.7rem; color: var(--accent-blue); font-weight: 600;">VIEW GALLERY</span>
                     </div>
                 </div>
 
                 <!-- MAS -->
-                <div class="visit-card glass glow-card">
+                <div class="visit-card glass glow-card" onclick="openLightbox(['Industry Visits/A059/1735778932785.jpeg'])">
                     <span class="visit-badge">SUSTAINABILITY</span>
                     <img src="Industry Visits/A059/1735778932785.jpeg" alt="MAS Intimates Visit" class="visit-img">
                     <div class="visit-overlay">
                         <h3>MAS Intimates - Thurulie</h3>
-                        <p>Explored Industrial Engineering and Sustainability in apparel manufacturing, inspired by their commitment to operational excellence.</p>
+                        <p>Explored Industrial Engineering and Sustainability in apparel manufacturing.</p>
+                        <span style="font-size: 0.7rem; color: var(--accent-blue); font-weight: 600;">VIEW GALLERY</span>
                     </div>
                 </div>
 
                 <!-- Teejay -->
-                <div class="visit-card glass glow-card">
+                <div class="visit-card glass glow-card" onclick="openLightbox(['Industry Visits/Teejay/1701580774947.jpeg'])">
                     <span class="visit-badge">DATA ANALYTICS</span>
                     <img src="Industry Visits/Teejay/1701580774947.jpeg" alt="Teejay Lanka Visit" class="visit-img">
                     <div class="visit-overlay">
                         <h3>Teejay Lanka PLC</h3>
-                        <p>Holistic understanding of end-to-end manufacturing processes and the crucial role of timely data in optimizing operational efficiency.</p>
+                        <p>Holistic understanding of end-to-end manufacturing processes.</p>
+                        <span style="font-size: 0.7rem; color: var(--accent-blue); font-weight: 600;">VIEW GALLERY</span>
                     </div>
                 </div>
 
                 <!-- Toyota -->
-                <div class="visit-card glass glow-card">
+                <div class="visit-card glass glow-card" onclick="openLightbox(['Industry Visits/Toyota/1735781022404.jpeg', 'Industry Visits/Toyota/1735781024028.jpeg'])">
                     <span class="visit-badge">ERP SYSTEMS</span>
                     <img src="Industry Visits/Toyota/1735781024028.jpeg" alt="Toyota Lanka Visit" class="visit-img">
                     <div class="visit-overlay">
                         <h3>Toyota Lanka</h3>
-                        <p>Invaluable insights into ERP implementations (IFS) and the strategies involved in driving operational efficiency through seamless integration.</p>
+                        <p>Invaluable insights into ERP implementations (IFS) and integration.</p>
+                        <span style="font-size: 0.7rem; color: var(--accent-blue); font-weight: 600;">VIEW GALLERY</span>
                     </div>
                 </div>
             </div>
@@ -530,6 +515,14 @@
     <footer style="padding: 60px; text-align: center; color: var(--text-secondary); font-size: 0.8rem;">
         <p>&copy; 2026 Madusha Deshan. All rights reserved.</p>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="modal">
+        <span class="modal-close" onclick="closeLightbox()">&times;</span>
+        <div class="modal-nav modal-prev" onclick="changeImage(-1)">&#10094;</div>
+        <img class="modal-content" id="lightbox-img">
+        <div class="modal-nav modal-next" onclick="changeImage(1)">&#10095;</div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

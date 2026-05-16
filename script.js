@@ -118,3 +118,38 @@ window.addEventListener('load', () => {
     // Refresh ScrollTrigger to ensure correct positions
     ScrollTrigger.refresh();
 });
+
+// Lightbox Logic
+let currentImages = [];
+let currentIndex = 0;
+
+function openLightbox(images) {
+    currentImages = images;
+    currentIndex = 0;
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    
+    lightboxImg.src = currentImages[currentIndex];
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function changeImage(step) {
+    currentIndex += step;
+    if (currentIndex >= currentImages.length) currentIndex = 0;
+    if (currentIndex < 0) currentIndex = currentImages.length - 1;
+    document.getElementById('lightbox-img').src = currentImages[currentIndex];
+}
+
+// Close on outside click
+window.addEventListener('click', (event) => {
+    const lightbox = document.getElementById('lightbox');
+    if (event.target == lightbox) {
+        closeLightbox();
+    }
+});
