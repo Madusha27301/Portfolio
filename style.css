@@ -866,13 +866,18 @@ textarea.form-input {
     .mini-scroll-container {
         height: 350px;
     }
-}
+    .slider-container {
+        height: 350px;
+    }
     .visits-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
+    .slider-container {
+        height: 250px;
+    }
     .visits-grid {
         grid-template-columns: 1fr;
     }
